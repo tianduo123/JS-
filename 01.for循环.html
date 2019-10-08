@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for循环</title>
+</head>
+<body>
+</body>
+<script>
+    /**
+     *  语法:
+     *  for(语句1;语句2;语句3){
+     *      要执行的js代码块
+     *  }
+     *  语句1 -- 在执行的js代码块之前执行
+     *  语句2 -- 自定义执行js代码块的条件判断
+     *  语句3 -- 在代码块每次执行后执行
+     */
+    // example
+    var arr = [0,1,2,3,4,5];
+    var arr2 = [];
+
+    for(var i=0;i<arr.length;i++){
+        arr2.push(arr[i]+1);
+    }
+
+    console.log(arr2);//[1,2,3,4,5,6]
+</script>
+</html>

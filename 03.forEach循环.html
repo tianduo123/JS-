@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>forEach循环</title>
+</head>
+<body>
+
+</body>
+<script>
+    /**
+     *  用法:用于将数组的每一项item都执行一次回调函数
+     *  注意:对于空数组是不会执行回调的
+     *  语法:
+     *  array.forEach(function(currentValue, index, arr), thisValue)
+     *  参数说明:
+     *  function(currentValue, index, arr) -- 必需,数组中每一项需要执行的函数
+     *      currentValue -- 必需,当前元素
+     *      index        -- 可选,当前元素的索引
+     *      arr          -- 可选,当前元素所属的数组
+     *  thisValue -- 可选,传递给函数的值一般用'this'值,如果这个参数为空,'undefined'会传递给'this'值
+     */
+
+    //example
+    var arr = ['张3','张4','张5'];
+    arr.forEach(function (currentValue) {
+        console.log(currentValue+'--这是forEach循环')
+        /**
+         * 张3--这是forEach循环
+         * 张4--这是forEach循环
+         * 张5--这是forEach循环
+         */
+    })
+</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for...in</title>
+</head>
+<body>
+
+</body>
+<script>
+    /**
+     *  for...in循环遍历数组或对象的属性
+     *  语法
+     *  for(变量 in 对象){
+     *      执行js代码块
+     *  }
+     *  for...in语句用于对数组或者对象的属性进行循环操作
+     *  for...in循环中的代码每执行一次,就会对数组的元素或者对象的属性进行一次操作
+     */
+
+    //example 遍历数组
+    // var arr = [
+    //         {name:'张2',age:12},
+    //         {name:'张3',age:13},
+    //         {name:'张4',age:14},
+    //     ];
+    //
+    // for(item in arr){
+    //     console.log(item);//返回index 0,1,2
+    //     console.log(arr[item]);//返回数组的每一项item
+    // }
+
+    //example 遍历对象
+        //    注: for...in循环只会遍历对象自身属性，原型中的默认属性不会遍历，但是原型上新增的属性会遍历
+    var obj = {
+        name:'李4',
+        age:18,
+        hobby:['LOL','basketball','football','TLBB'],
+        say(){
+            alert('HELLO WORLD')
+        }
+    };
+    obj.weight = '50kg';
+    Object.prototype.family = ['father','mather'];
+
+    for(item in obj){
+        console.log(item);//返回对象的所有属性名,包含新添加的weight与family
+    }
+</script>
+</html>
