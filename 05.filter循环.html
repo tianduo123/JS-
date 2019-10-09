@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>filter循环</title>
+</head>
+<body>
+
+</body>
+<script>
+    /**
+     *  filter()方法创建一个新数组,其包含通过所提供函数实现的测试的所有元素
+     *
+     *  语法:var newArray = arr.filter(callback(element[, index[, array]])[, thisValue])
+     *  参数说明:
+     *  callback -- 必需,回调函数,用于测试数组中的每个元素,如测试结果为true则保留该元素,反之不保留
+     *      element -- 必需,数组中当前正在处理的元素
+     *      index   -- 可选,当前元素在数组中的索引值
+     *      array   -- 可选,调用filter方法的数组本身
+     *  thisValue -- 可选,执行callback时的this值,不传为window
+     *
+     *  描述:filter()方法为数组中的每个元素都调用一次callback函数,并将所有返回true的元素组成一个新的数组,
+     *      callback函数只会在已经赋值的索引上被调用,对于被删除或者从未被赋值的索引不会调用
+     */
+
+    //example
+    var arr = [1,2,3,4,5,6];
+    newArr = arr.filter(item=>{
+        return item>3
+    });
+    console.log(newArr);//[4,5,6]
+</script>
+</html>
